@@ -477,7 +477,7 @@
             <a href="{{ route('invoices.index') }}" class="nav-link {{ request()->routeIs('invoices.*') ? 'active' : '' }}">
                 <i class="bi bi-receipt"></i> Invoice
             </a>
-            <a href="{{ route('quotation.index') }}" class="nav-link {{ request()->routeIs('quotation.*') ? 'active' : '' }}">
+            <a href="{{ route('quotations.index') }}" class="nav-link {{ request()->routeIs('quotations.*') ? 'active' : '' }}">
                 <i class="bi bi-file-earmark-text"></i> Quotation
             </a>
             <a href="{{ route('product.index') }}" class="nav-link {{ request()->routeIs('product.*') ? 'active' : '' }}" style="position:relative">
