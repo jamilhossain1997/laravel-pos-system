@@ -4,8 +4,9 @@
 <div class="page-header">
     <div class="page-title">System Settings</div>
 </div>
+<div class="m-2"></div>
 <div class="form-card" style="max-width:720px">
-    <form method="POST" action="{{ route('admin.settings.update') }}">
+    <form method="POST" action="{{ route('settings.update') }}">
         @csrf
         <h6 class="text-muted text-uppercase fw-600 mb-3" style="font-size:11px;letter-spacing:.07em">
             Company Information

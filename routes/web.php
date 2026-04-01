@@ -107,7 +107,7 @@ Route::middleware(['auth'])->group(function () {
     });
 
     // ── Admin routes (Admin role only) ───────────────────────
-    Route::middleware(['role:Admin'])->group(function () {
+    Route::middleware(['role:super-admin'])->group(function () {
         Route::resource('roles', RoleController::class);
         Route::resource('units', UnitController::class);
         Route::prefix('settings')->name('settings.')->group(function () {
