@@ -101,9 +101,9 @@ Route::middleware(['auth'])->group(function () {
     });
 
     // Reports
-    Route::prefix('report')->name('report.')->group(function () {
-        Route::get('/invoice',     [InvoiceReportController::class, 'index'])->name('invoice');
-        Route::get('/invoice/pdf', [InvoiceReportController::class, 'pdf'])->name('invoice.pdf');
+    Route::prefix('reports')->name('reports.')->group(function () {
+        Route::get('/invoice',     [InvoiceReportController::class, 'index'])->name('invoices');
+        Route::get('/invoice/pdf', [InvoiceReportController::class, 'pdf'])->name('invoices.pdf');
     });
 
     // ── Admin routes (Admin role only) ───────────────────────

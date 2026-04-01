@@ -505,13 +505,13 @@
 
             {{-- Reports --}}
             <div class="nav-group-label">Reports</div>
-            <a class="nav-link {{ request()->routeIs('report.*') ? '' : 'collapsed' }}"
+            <a class="nav-link {{ request()->routeIs('reports.*') ? '' : 'collapsed' }}"
                 data-bs-toggle="collapse" href="#report-sub" role="button"
-                aria-expanded="{{ request()->routeIs('report.*') ? 'true' : 'false' }}">
+                aria-expanded="{{ request()->routeIs('reports.*') ? 'true' : 'false' }}">
                 <i class="bi bi-bar-chart-line"></i> Report <span class="arrow"><i class="bi bi-chevron-right"></i></span>
             </a>
-            <div class="collapse nav-sub {{ request()->routeIs('report.*') ? 'show' : '' }}" id="report-sub">
-                <a href="{{ route('report.invoice') }}" class="nav-link {{ request()->routeIs('report.invoice*') ? 'active' : '' }}"><i class="bi bi-file-bar-graph"></i> Invoice Overview</a>
+            <div class="collapse nav-sub {{ request()->routeIs('reports.*') ? 'show' : '' }}" id="report-sub">
+                <a href="{{ route('reports.invoices') }}" class="nav-link {{ request()->routeIs('reports.invoices') ? 'active' : '' }}"><i class="bi bi-file-bar-graph"></i> Invoice Overview</a>
             </div>
 
             {{-- Admin --}}

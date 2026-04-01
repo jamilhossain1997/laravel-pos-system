@@ -31,7 +31,7 @@ class InvoiceReportController extends Controller {
             ->when($request->status, fn($q,$s) => $q->where('status',$s))
             ->latest()->get();
         $settings = Setting::whereIn('key',['company_name','company_address','currency_symbol'])->pluck('value','key');
-        $pdf = Pdf::loadView('reports.invoice_pdf', compact('invoices','settings'))->setPaper('a4','landscape');
+        $pdf = Pdf::loadView('reports.invoices.pdf', compact('invoices','settings'))->setPaper('a4','landscape');
         return $pdf->download('Invoice-Report-'.now()->format('Ymd').'.pdf');
     }
 }
