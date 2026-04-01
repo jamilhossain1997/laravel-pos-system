@@ -59,7 +59,7 @@
 
 <div class="print-hide d-flex justify-content-end gap-2">
     <button onclick="window.print()" class="btn btn-dark">🖨️ Print</button>
-    <a href="{{ route('quotations.download',$quotation->id) }}" class="btn btn-primary">⬇️ PDF</a>
+    <a href="{{ route('quotations.pdf',$quotation->id) }}" class="btn btn-primary">⬇️ PDF</a>
 </div>
 
 <div class="quote-box">
@@ -145,7 +145,7 @@
 
     {{-- Footer --}}
     <div class="mt-5 text-center text-muted" style="font-size:12px">
-        Thank you for your business 🙏
+        Thank you for your business
     </div>
 
 </div>
